@@ -2,7 +2,7 @@
 
 
 # Using an alpine-linux base image with python installed in it
-FROM python:3.11-alpine
+FROM python:3.10.8
 # changing directory to an empty directory, /app/ (created automatically)
 # copying all the files from the BlankDjango (host file system) to /app/ (container file system)
 # note that this command will take .dockerignore into consideration
