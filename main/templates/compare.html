@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand mx-auto" href="">
+        Compare contacts
+      </a>
+    </nav>
+    <br><br>
+
+    <button id="menu" class="btn btn-primary" >Menu</button>
+
+  <br><br><br><br>
+  
+ 
+
+<script type="text/javascript">
+    document.getElementById("menu").onclick = function () {
+        location.href = "http://127.0.0.1:8000/";
+    };
+</script>
+
+<input type="text" id="n1" placeholder="enter name1"><br><br>
+<input type="text" id="n2" placeholder="enter name2"><br><br>
+<input onclick="return compare()" type="submit" value="Go">    
+    
+    <br><br>
+<script>
+    function compare(){
+
+      var url = `http://127.0.0.1:8000/display/${document.getElementById('n1').value}/${document.getElementById('n2').value}`;
+      window.location.assign(url) 
+      return false;
+    }
+
+</script>
