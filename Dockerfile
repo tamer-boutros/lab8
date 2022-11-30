@@ -15,4 +15,4 @@ RUN python manage.py migrate
 # Opening port 8000 in container
 EXPOSE 8000/tcp
 # command to be executed when container is running
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
